@@ -66,6 +66,33 @@ This project is a static site with no external build steps required.
 
 ---
 
+## 🌐 Deploying to GitHub Pages
+
+Since this portfolio is a static site with `index.html` at the project root, it can be hosted directly on GitHub Pages with zero build configuration:
+
+1. **Push code to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Update portfolio website"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages**:
+   - Navigate to your repository on GitHub: [`Pikalyx/Portfolio-Website`](https://github.com/Pikalyx/Portfolio-Website).
+   - Click the **Settings** tab at the top.
+   - In the left sidebar under **Code and automation**, click **Pages**.
+   - Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
+   - Under **Branch**, select `main` and the `/ (root)` folder, then click **Save**.
+
+3. **Access the live site**:
+   - GitHub Actions will automatically run the Pages deployment workflow (viewable in the **Actions** tab).
+   - Once deployed, your site will be live at:
+     ```
+     https://pikalyx.github.io/Portfolio-Website/
+     ```
+
+---
+
 ## 📬 Contact & Links
 
 - **Email**: [diegocorsino12@gmail.com](mailto:diegocorsino12@gmail.com)
