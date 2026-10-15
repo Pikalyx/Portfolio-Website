@@ -78,7 +78,7 @@ Since this portfolio is a static site with `index.html` at the project root, it 
    ```
 
 2. **Enable GitHub Pages**:
-   - Navigate to your repository on GitHub: [`Pikalyx/Portfolio-Website`](https://github.com/Pikalyx/Portfolio-Website).
+   - Navigate to your repository on GitHub.
    - Click the **Settings** tab at the top.
    - In the left sidebar under **Code and automation**, click **Pages**.
    - Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
@@ -88,7 +88,7 @@ Since this portfolio is a static site with `index.html` at the project root, it 
    - GitHub Actions will automatically run the Pages deployment workflow (viewable in the **Actions** tab).
    - Once deployed, your site will be live at:
      ```
-     https://pikalyx.github.io/Portfolio-Website/
+     https://[your-username].github.io/[repository-name]/
      ```
 
 ---
