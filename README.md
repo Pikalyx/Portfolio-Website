@@ -20,6 +20,9 @@ This repository hosts the source code for my personal portfolio. It serves as a 
 - **Hydroficient IoT Cyber Defense Externship**  
   A comprehensive IoT security project focused on building, auditing, and securing IoT infrastructure. Highlights include STRIDE threat modeling, simulated cyberattacks (packet spoofing, replay attacks, unauthorized control), insecure MQTT pipeline analysis, and implementing TLS/mTLS defenses alongside real-time monitoring dashboards.
 
+- **SQL & Database Architecture Externship with Breaking Games**
+   An in-progress data project focused on transforming six messy CSV files into an analytics database and a Q4 dashboard using SQL and Claude.
+
 ---
 
 ## 🧭 Sections & Features
