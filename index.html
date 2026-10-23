@@ -40,7 +40,7 @@
           }
         }
       }
-    }
+    };
   </script>
 
   <style>
@@ -73,21 +73,9 @@
       background-color: var(--pf-accent);
       color: #FFFFFF !important;
     }
-
-    .breakdown-chevron {
-      transition: transform 0.2s ease;
-    }
-    .breakdown-card.open .breakdown-chevron {
-      transform: rotate(180deg);
-    }
-
-    body.home-page #works,
-    body.home-page #about {
-      display: none;
-    }
   </style>
 </head>
-<body class="home-page bg-pf-canvas text-pf-text antialiased selection:bg-pf-accent/20 selection:text-pf-accent">
+<body class="bg-pf-canvas text-pf-text antialiased selection:bg-pf-accent/20 selection:text-pf-accent">
 
   <div data-pf-theme="warm" class="relative flex min-h-screen flex-col bg-pf-canvas text-pf-text" style="--pf-nav-height: 79px;">
 
@@ -97,25 +85,21 @@
     <header class="sticky top-0 z-50 flex h-[79px] w-full items-center justify-between border-b border-pf-divider bg-pf-canvas/95 backdrop-blur-sm px-4 transition-colors duration-200 md:px-16">
       
       <!-- Brand / Left -->
-      <a href="#home" data-route="home" class="route-link flex items-center gap-2.5 text-left focus:outline-none group">
+      <a href="index.html" class="flex items-center gap-2.5 text-left focus:outline-none group">
         <span class="font-pf-heading italic text-xl md:text-2xl text-pf-text group-hover:text-pf-accent transition-colors">
           Diego Corsino
-        </span>
-        <span class="text-pf-divider text-lg font-light">|</span>
-        <span class="text-xs md:text-sm font-normal text-pf-muted">
-          Club President
         </span>
       </a>
 
       <!-- Center Pill Switcher -->
       <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-1 rounded-full border border-pf-divider bg-pf-surface p-1 shadow-2xs">
-        <a href="#home" id="nav-btn-home" data-route="home" class="route-link nav-pill-btn active rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
+        <a href="index.html" id="nav-btn-home" class="nav-pill-btn active rounded-full px-5 py-1.5 text-sm font-medium text-white transition-all">
           Home
         </a>
-        <a href="work.html" id="nav-btn-works" data-route="works" class="route-link nav-pill-btn rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
+        <a href="work.html" id="nav-btn-works" class="nav-pill-btn rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
           Work
         </a>
-        <a href="about.html" id="nav-btn-about" data-route="about" class="route-link nav-pill-btn rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
+        <a href="about.html" id="nav-btn-about" class="nav-pill-btn rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
           About
         </a>
       </nav>
@@ -127,7 +111,7 @@
         </a>
         <a href="https://linkedin.com/in/diego-corsino" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-pf-text hover:text-pf-accent transition-colors p-1">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63c.9 0 1.63-.73 1.63-1.63s-.73-1.63-1.63-1.63Z"/>
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63c.9 0 1.63-.73 1.63-1.63-.9 0-1.63-.73-1.63-1.63Z"/>
           </svg>
         </a>
         <a href="https://github.com/pikalyx" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-pf-text hover:text-pf-accent transition-colors p-1">
@@ -148,9 +132,9 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu-drawer" class="hidden md:hidden border-b border-pf-divider bg-pf-surface px-4 py-4 space-y-3">
       <div class="flex gap-2">
-        <a href="index.html" data-route="home" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">Home</a>
-        <a href="work.html" data-route="works" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">Work</a>
-        <a href="about.html" data-route="about" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">About</a>
+        <a href="index.html" class="flex-1 text-center py-2 rounded-full border border-pf-accent bg-pf-accent text-sm font-medium text-white">Home</a>
+        <a href="work.html" class="flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">Work</a>
+        <a href="about.html" class="flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">About</a>
       </div>
       <div class="flex items-center justify-between pt-2 border-t border-pf-divider text-xs text-pf-muted">
         <a href="mailto:diegocorsino12@gmail.com" class="underline text-pf-text">diegocorsino12@gmail.com</a>
@@ -162,9 +146,9 @@
     </div>
 
     <!-- ========================================== -->
-    <!-- MAIN VIEW: HOME + WORK SAMPLES + ABOUT ME  -->
+    <!-- MAIN VIEW: HOME / HERO ONLY                -->
     <!-- ========================================== -->
-    <main id="main-portfolio-view" class="flex-1">
+    <main id="main-portfolio-view" class="flex-1 flex items-center justify-center">
 
       <!-- HERO SECTION -->
       <section id="home" class="flex w-full flex-col items-center gap-5 px-4 pt-12 pb-16 text-center md:px-16 md:pt-20 md:pb-24 max-w-4xl mx-auto">
@@ -199,7 +183,7 @@
 
         <!-- Hero CTA Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-3.5 mt-3">
-          <a href="work.html" data-route="works" class="route-link inline-flex items-center gap-2 rounded-full bg-pf-accent hover:bg-pf-accentHover text-white px-6 py-3 text-sm font-medium transition-colors shadow-xs">
+          <a href="work.html" class="inline-flex items-center gap-2 rounded-full bg-pf-accent hover:bg-pf-accentHover text-white px-6 py-3 text-sm font-medium transition-colors shadow-xs">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
@@ -215,771 +199,7 @@
 
       </section>
 
-      <!-- WORK SAMPLES SECTION -->
-      <section id="works" class="w-full max-w-6xl mx-auto px-4 md:px-16 py-12 md:py-16 border-t border-pf-divider">
-        
-        <!-- Section Heading -->
-        <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
-          <h2 class="font-pf-heading italic text-3xl sm:text-4xl md:text-[42px] text-pf-text mb-3">
-            Work samples
-          </h2>
-          <p class="text-sm sm:text-base text-pf-muted leading-relaxed">
-            Dive into my portfolio showcasing various projects that highlight my skills in web development, programming, and teamwork.
-          </p>
-        </div>
-
-        <!-- 2-Column Project Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-
-          <!-- Project Card 1: Pokedex App -->
-          <a href="#work-pokedex-app" id="card-pokedex" data-route="work-pokedex-app" class="route-link group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-pf-divider bg-pf-surface transition-all hover:border-pf-accent/60 hover:shadow-lg cursor-pointer">
-            <div>
-              <!-- Project Cover Image Banner -->
-              <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-pf-pill border-b border-pf-divider">
-                <img
-                  id="card-pokedex-img"
-                  src="assets/pokedex-app.jpg"
-                  alt="Pokedex App"
-                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div class="absolute top-3.5 left-3.5 inline-flex items-center gap-1.5 rounded-full bg-pf-surface/95 backdrop-blur-xs border border-pf-divider px-3 py-1 text-xs font-medium text-pf-text shadow-2xs">
-                  <svg class="w-3.5 h-3.5 text-pf-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
-                  <span>Nov 2025</span>
-                </div>
-              </div>
-
-              <!-- Card Content Body -->
-              <div class="p-6 md:p-8 pb-4">
-                <div class="flex items-start justify-between gap-2 mb-2.5">
-                  <h3 class="font-pf-heading italic text-2xl text-pf-text group-hover:text-pf-accent transition-colors">
-                    Pokedex App
-                  </h3>
-                  <span class="text-pf-muted group-hover:text-pf-accent transition-transform group-hover:translate-x-1 font-medium">→</span>
-                </div>
-
-                <p class="text-sm text-pf-muted leading-relaxed mb-5">
-                  A fully functioning Pokémon information app that displays comprehensive data about Pokémon to the user.
-                </p>
-              </div>
-            </div>
-
-            <!-- Tags Footer -->
-            <div class="px-6 md:px-8 pb-6 md:pb-8 flex flex-wrap gap-1.5">
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Android Development</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">AI</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Data Visualization</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Figma</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Full-Stack Development</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Gaming</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Software Engineering</span>
-            </div>
-          </a>
-
-          <!-- Project Card 2: Hydroficient IoT Cyber Defense Externship -->
-          <a href="#work-hydroficient-iot-cyber-defense-externship" id="card-hydroficient" data-route="work-hydroficient-iot-cyber-defense-externship" class="route-link group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-pf-divider bg-pf-surface transition-all hover:border-pf-accent/60 hover:shadow-lg cursor-pointer">
-            <div>
-              <!-- Project Cover Image Banner -->
-              <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-pf-pill border-b border-pf-divider">
-                <img
-                  id="card-hydroficient-img"
-                  src="assets/hydroficient-iot.jpg"
-                  alt="Hydroficient IoT Cyber Defense Externship"
-                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div class="absolute top-3.5 left-3.5 right-3.5 flex flex-wrap items-center justify-between gap-2">
-                  <span class="inline-flex items-center gap-1.5 rounded-full bg-pf-surface/95 backdrop-blur-xs border border-pf-divider px-3 py-1 text-xs font-medium text-pf-text shadow-2xs">
-                    <span>Hydroficient · Oct 2026</span>
-                  </span>
-                  <span class="inline-flex items-center gap-1 rounded-full bg-pf-greenBg/95 backdrop-blur-xs border border-pf-greenDot/30 px-2.5 py-1 text-xs font-medium text-pf-greenText shadow-2xs">
-                    <svg class="w-3.5 h-3.5 text-pf-greenDot fill-current" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span>Verified by Extern</span>
-                  </span>
-                </div>
-              </div>
-
-              <!-- Card Content Body -->
-              <div class="p-6 md:p-8 pb-4">
-                <div class="flex items-start justify-between gap-2 mb-2.5">
-                  <h3 class="font-pf-heading italic text-2xl text-pf-text group-hover:text-pf-accent transition-colors">
-                    Hydroficient IoT Cyber Defense Externship
-                  </h3>
-                  <span class="text-pf-muted group-hover:text-pf-accent transition-transform group-hover:translate-x-1 font-medium">→</span>
-                </div>
-
-                <p class="text-sm text-pf-muted leading-relaxed mb-5">
-                  Build, hack, and defend real IoT infrastructure, then hand your security playbook to an actual company. You'll launch realistic cyberattacks, from spoofing and replay attacks to unauthorized shutoffs, and implement defenses like TLS and mTLS.
-                </p>
-              </div>
-            </div>
-
-            <!-- Tags Footer -->
-            <div class="px-6 md:px-8 pb-6 md:pb-8 flex flex-wrap gap-1.5">
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Python Programming</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Data Analysis</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Threat Modeling</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Dashboard Development</span>
-            </div>
-          </a>
-
-          <!-- Project Card 3: SQL & Database Architecture Externship -->
-          <a href="#work-breaking-games-sql" id="card-breaking-games-sql" data-route="work-breaking-games-sql" class="route-link group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-pf-divider bg-pf-surface transition-all hover:border-pf-accent/60 hover:shadow-lg cursor-pointer">
-            <div>
-              <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-pf-pill border-b border-pf-divider">
-                <img
-                  id="card-breaking-games-sql-img"
-                  src="assets/breaking-games-sql.jpg"
-                  alt="SQL &amp; Database Architecture Externship with Breaking Games"
-                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div class="absolute top-3.5 left-3.5 right-3.5 flex flex-wrap items-center justify-between gap-2">
-                  <span class="inline-flex items-center gap-1.5 rounded-full bg-pf-surface/95 backdrop-blur-xs border border-pf-divider px-3 py-1 text-xs font-medium text-pf-text shadow-2xs">Breaking Games</span>
-                  <span class="inline-flex items-center gap-1 rounded-full bg-pf-pill/95 backdrop-blur-xs border border-pf-divider px-2.5 py-1 text-xs font-medium text-pf-muted shadow-2xs">In progress</span>
-                </div>
-              </div>
-              <div class="p-6 md:p-8 pb-4">
-                <div class="flex items-start justify-between gap-2 mb-2.5">
-                  <h3 class="font-pf-heading italic text-2xl text-pf-text group-hover:text-pf-accent transition-colors">SQL &amp; Database Architecture Externship with Breaking Games</h3>
-                  <span class="text-pf-muted group-hover:text-pf-accent transition-transform group-hover:translate-x-1 font-medium">→</span>
-                </div>
-                <p class="text-sm text-pf-muted leading-relaxed mb-5">Turn six messy CSVs into an analytics database and a Q4 dashboard that drives real business decisions. SQL + Claude.</p>
-              </div>
-            </div>
-            <div class="px-6 md:px-8 pb-6 md:pb-8 flex flex-wrap gap-1.5">
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Analytics Database Design</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Data Analysis</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">SQL Fundamentals</span>
-              <span class="rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-text">Data Storytelling</span>
-            </div>
-          </a>
-
-        </div>
-
-
-      </section>
-
-      <!-- ABOUT ME SECTION -->
-      <section id="about" class="w-full max-w-6xl mx-auto px-4 md:px-16 py-12 md:py-16 border-t border-pf-divider">
-        
-        <!-- Section Heading -->
-        <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
-          <h2 class="font-pf-heading italic text-3xl sm:text-4xl md:text-[42px] text-pf-text mb-3">
-            About me
-          </h2>
-          <p class="text-sm sm:text-base text-pf-muted leading-relaxed">
-            As a computer science student and Club President, I combine leadership with a passion for technology, crafting impactful digital solutions.
-          </p>
-        </div>
-
-        <!-- 2-Column Layout: Left Contact Sidebar + Right Bio/Experience/Education/Skills -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-          <!-- Left Panel: Contact Card -->
-          <div class="lg:col-span-4 rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-8 flex flex-col justify-between space-y-6">
-            <div class="space-y-4 text-sm">
-              
-              <!-- Email -->
-              <div class="flex items-center gap-3">
-                <svg class="w-4 h-4 text-pf-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-                <a href="mailto:diegocorsino12@gmail.com" class="text-pf-text hover:text-pf-accent underline underline-offset-4 decoration-pf-divider">
-                  diegocorsino12@gmail.com
-                </a>
-              </div>
-
-              <!-- LinkedIn -->
-              <div class="flex items-center gap-3">
-                <svg class="w-4 h-4 text-pf-muted fill-current shrink-0" viewBox="0 0 24 24">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63c.9 0 1.63-.73 1.63-1.63s-.73-1.63-1.63-1.63Z"/>
-                </svg>
-                <a href="https://linkedin.com/in/diego-corsino" target="_blank" rel="noopener noreferrer" class="text-pf-text hover:text-pf-accent underline underline-offset-4 decoration-pf-divider">
-                  LinkedIn Profile
-                </a>
-              </div>
-
-              <!-- GitHub -->
-              <div class="flex items-center gap-3">
-                <svg class="w-4 h-4 text-pf-muted fill-current shrink-0" viewBox="0 0 24 24">
-                  <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
-                </svg>
-                <a href="https://github.com/pikalyx" target="_blank" rel="noopener noreferrer" class="text-pf-text hover:text-pf-accent underline underline-offset-4 decoration-pf-divider">
-                  GitHub Profile
-                </a>
-              </div>
-
-              <!-- Location -->
-              <div class="flex items-center gap-3">
-                <svg class="w-4 h-4 text-pf-muted shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                <span class="text-pf-text">Jersey City, NJ, USA</span>
-              </div>
-
-            </div>
-
-            <a href="assets/Diego_Corsino.pdf" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 rounded-full border border-pf-accent text-pf-accent hover:bg-pf-accent hover:text-white px-5 py-2.5 text-sm font-medium transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-              </svg>
-              <span>Download Resume</span>
-            </a>
-          </div>
-
-          <!-- Right Panel: Bio, Experience, Education, Skills -->
-          <div class="lg:col-span-8 space-y-6">
-
-            <!-- Bio Paragraph Card -->
-            <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-8">
-              <p class="text-sm sm:text-base text-pf-text leading-relaxed">
-                I'm Diego Corsino, a passionate computer science graduate and former Club President with a strong focus on technology and teamwork. I thrive in collaborative environments and love creating innovative solutions through coding and development. My journey in tech has led me to various roles, ranging from student assistant to team manager, each enriching my skills and experience.
-              </p>
-            </div>
-
-            <!-- Experience Sub-section -->
-            <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-8">
-              <h3 class="font-pf-heading italic text-2xl text-pf-text mb-5">Experience</h3>
-              <div class="divide-y divide-pf-divider">
-                <div class="py-3.5 first:pt-0 last:pb-0">
-                  <div class="font-medium text-pf-text text-sm sm:text-base">IoT Cyber Defense Extern</div>
-                  <div class="text-xs sm:text-sm text-pf-muted mt-0.5">Hydroficient · October 2026 - Present</div>
-                </div>
-                <div class="py-3.5 first:pt-0 last:pb-0">
-                  <div class="font-medium text-pf-text text-sm sm:text-base">Student Assistant</div>
-                  <div class="text-xs sm:text-sm text-pf-muted mt-0.5">Trexler Library · September 2022 - May 2026</div>
-                </div>
-                <div class="py-3.5 first:pt-0 last:pb-0">
-                  <div class="font-medium text-pf-text text-sm sm:text-base">Team Manager</div>
-                  <div class="text-xs sm:text-sm text-pf-muted mt-0.5">Codespeak Labs · June 2025 - August 2025</div>
-                </div>
-                <div class="py-3.5 first:pt-0 last:pb-0">
-                  <div class="font-medium text-pf-text text-sm sm:text-base">Summer Intern</div>
-                  <div class="text-xs sm:text-sm text-pf-muted mt-0.5">CodePath · June 2024 - August 2024</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Education Sub-section -->
-            <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-8">
-              <h3 class="font-pf-heading italic text-2xl text-pf-text mb-5">Education</h3>
-              <div>
-                <div class="font-medium text-pf-text text-sm sm:text-base">Muhlenberg College</div>
-                <div class="text-xs sm:text-sm text-pf-muted mt-0.5">Bachelor's, Computer Science · Class of 2026</div>
-              </div>
-            </div>
-
-            <!-- Skills Sub-section -->
-            <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-8">
-              <h3 class="font-pf-heading italic text-2xl text-pf-text mb-5">Skills</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Git</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Python</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Web Development</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">HTML/CSS</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">React.js</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Linux/Unix</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Data Structures &amp; Algorithms</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Android Development</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">TypeScript</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Java</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Blender</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Ruby</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Ruby on Rails</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Canva</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">MongoDB</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">JavaScript</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Bootstrap</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Pandas</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Gradle</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Machine Learning</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Mongoose</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">MySQL</span>
-                <span class="rounded-full bg-pf-pill px-3.5 py-1.5 text-xs font-medium text-pf-text">Node.js</span>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
     </main>
-
-    <!-- ========================================================== -->
-    <!-- PROJECT DETAIL VIEW 1: POKEDEX APP (#work-pokedex-app)     -->
-    <!-- ========================================================== -->
-    <section id="view-work-pokedex-app" class="hidden flex-1 w-full max-w-5xl mx-auto px-4 md:px-16 py-10 md:py-16">
-      
-      <!-- Top Back Navigation -->
-      <div class="mb-8">
-        <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-accent hover:underline">
-          <span>←</span>
-          <span>View all work</span>
-        </a>
-      </div>
-
-      <!-- Header Block -->
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <div class="inline-flex items-center gap-2 rounded-full bg-pf-pill border border-pf-divider px-3.5 py-1 text-xs font-medium text-pf-muted mb-4">
-          <span>Nov 2025</span>
-        </div>
-        <h1 class="font-pf-heading italic text-3xl sm:text-4xl md:text-5xl text-pf-text mb-4">
-          Pokedex App
-        </h1>
-        <p class="text-base sm:text-lg text-pf-muted leading-relaxed mb-6">
-          A fully functioning Pokémon information app that displays comprehensive data about Pokémon to the user.
-        </p>
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Android Development</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">AI</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Data Visualization</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Figma</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Full-Stack Development</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Gaming</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Software Engineering</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Kotlin</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">PokeAPI</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Search &amp; Filtering</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Dark Mode</span>
-        </div>
-      </div>
-
-      <!-- Project Cover Banner Image -->
-      <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-pf-divider bg-pf-pill mb-10 shadow-xs">
-        <img
-          id="detail-pokedex-img"
-          src="assets/pokedex-app.jpg"
-          alt="Pokedex App Cover"
-          class="w-full h-full object-cover"
-        />
-      </div>
-
-      <!-- What I've accomplished Card -->
-      <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-10 mb-12">
-        <h2 class="font-pf-heading italic text-2xl text-pf-text mb-4">
-          What I've accomplished
-        </h2>
-        <p class="text-sm sm:text-base text-pf-text leading-relaxed">
-          Built a Kotlin Android Pokedex that uses PokeAPI to organize searchable Pokemon entries, locations, moves, types, and abilities in a mobile-first experience. I implemented menu navigation, searchable list and detail views, device-based dark mode, and item interactions such as opening a move to view its effects, power, and power points. 
-        </p>
-        <br>
-        <p class="text-sm sm:text-base text-pf-text leading-relaxed">
-          I also coordinated GitHub branch workflows, merged team contributions, and tested the app across multiple environments to improve software quality.
-        </p>
-        <br>
-        <p>
-          <a href="https://github.com/Group10-Projext-Dex/pokedex">Github Page</a>
-        </p>
-      </div>
-
-      <!-- Bottom Navigation -->
-      <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-pf-divider">
-        <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 rounded-full border border-pf-accent text-pf-accent hover:bg-pf-accent hover:text-white px-6 py-2.5 text-sm font-medium transition-colors">
-          <span>View all work</span>
-          <span>→</span>
-        </a>
-        <a href="#work-hydroficient-iot-cyber-defense-externship" data-route="work-hydroficient-iot-cyber-defense-externship" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-text hover:text-pf-accent transition-colors">
-          <span>Next: Hydroficient IoT Cyber Defense Externship</span>
-          <span>→</span>
-        </a>
-      </div>
-
-    </section>
-
-    <!-- ========================================================== -->
-    <!-- PROJECT DETAIL VIEW 2: HYDROFICIENT (#work-hydroficient...) -->
-    <!-- ========================================================== -->
-    <section id="view-work-hydroficient" class="hidden flex-1 w-full max-w-6xl mx-auto px-4 md:px-16 py-10 md:py-16">
-      
-      <!-- Top Back Navigation -->
-      <div class="mb-8">
-        <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-accent hover:underline">
-          <span>←</span>
-          <span>View all work</span>
-        </a>
-      </div>
-
-      <!-- Header Block -->
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <div class="inline-flex flex-wrap items-center justify-center gap-2 mb-4">
-          <span class="inline-flex items-center gap-1.5 rounded-full bg-pf-greenBg px-3 py-1 text-xs font-medium text-pf-greenText border border-pf-greenDot/20">
-            <svg class="w-3.5 h-3.5 text-pf-greenDot fill-current" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            Verified by Extern
-          </span>
-          <span class="text-xs font-medium text-pf-muted">Hydroficient · Oct 2026</span>
-        </div>
-
-        <h1 class="font-pf-heading italic text-3xl sm:text-4xl md:text-5xl text-pf-text mb-4">
-          Hydroficient IoT Cyber Defense Externship
-        </h1>
-
-        <p class="text-base sm:text-lg text-pf-muted leading-relaxed mb-6">
-          Build, hack, and defend real IoT infrastructure, then hand your security playbook to an actual company. You'll launch realistic cyberattacks, from spoofing and replay attacks to unauthorized shutoffs, and implement defenses like TLS and mTLS.
-        </p>
-
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Python Programming</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Data Analysis</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Threat Modeling</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Dashboard Development</span>
-        </div>
-      </div>
-
-      <!-- Project Cover Banner Image -->
-      <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-pf-divider bg-pf-pill mb-10 shadow-xs">
-        <img
-          id="detail-hydroficient-img"
-          src="assets/hydroficient-iot.jpg"
-          alt="Hydroficient IoT Cyber Defense Externship Cover"
-          class="w-full h-full object-cover"
-        />
-      </div>
-
-      <!-- Overview Card -->
-      <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-10 mb-10">
-        <h2 class="font-pf-heading italic text-2xl text-pf-text mb-4">
-          Overview
-        </h2>
-        <p class="text-sm sm:text-base text-pf-text leading-relaxed">
-          During my externship at Hydroficient, I developed and executed cyber defense strategies for IoT infrastructure. I conducted realistic cyberattacks and implemented security measures, culminating in a comprehensive security playbook tailored for a real-world application. This experience deepened my understanding of IoT technologies and the critical need for robust security protocols.
-        </p>
-      </div>
-
-      <!-- Project Breakdown (7 Expandable Accordion Cards) -->
-      <div class="mb-12">
-        <h2 class="font-pf-heading italic text-2xl sm:text-3xl text-pf-text mb-6">
-          Project breakdown
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
-
-          <!-- Breakdown Item 1 -->
-          <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
-            <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
-              <div class="flex items-start gap-3.5">
-                <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">1</span>
-                <div>
-                  <h3 class="font-semibold text-base text-pf-text">Understanding IoT Systems &amp; Threat Modeling</h3>
-                  <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">
-                    I produced a professional threat model for The Grand Marina's IoT water system, applying STRIDE to identify and prioritize risks.
-                  </p>
-                </div>
-              </div>
-              <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
-              <p class="leading-relaxed">
-                The externship scenario described a hotel's water IoT system. I inventoried assets, mapped data flows, applied STRIDE to each component, and wrote an executive summary listing the top three prioritized threats and recommended fixes.
-              </p>
-              <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
-                <span class="text-xs font-medium text-pf-text">Google Docs</span>
-                <a href="https://docs.google.com/document/d/1jB_hXcjTI2nNeWmhuIsag_2igH8QMMoaESxU66FUh3Y/edit?tab=t.0#heading=h.3i3su6ndfzs1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
-                  <span>Access</span>
-                  <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Breakdown Item 2 -->
-          <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
-            <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
-              <div class="flex items-start gap-3.5">
-                <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">2</span>
-                <div>
-                  <h3 class="font-semibold text-base text-pf-text">Learning Python for IoT Security</h3>
-                  <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">
-                    I built Python data structures, control flow, functions, and data-preparation notebooks in Google Colab to analyze IoT-style sensor data.
-                  </p>
-                </div>
-              </div>
-              <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
-              <p class="leading-relaxed">
-                I completed Colab notebooks that implemented Python data structures, control flow, and functions, cleaned loan-style data with pandas, parsed JSON into normalized tables, and produced sensor log generator scripts. Deliverables included runnable Colab and Drive files.
-              </p>
-              <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
-                <span class="text-xs font-medium text-pf-text">Google Colab</span>
-                <a href="https://colab.research.google.com/drive/159_M-ytXlpbQygf1HkhfA955KcCbPU4i?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
-                  <span>Open Link</span>
-                  <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Breakdown Item 3 -->
-          <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
-            <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
-              <div class="flex items-start gap-3.5">
-                <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">3</span>
-                <div>
-                  <h3 class="font-semibold text-base text-pf-text">Building an Insecure MQTT Pipeline</h3>
-                  <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">
-                    I built an insecure MQTT pipeline, ran a local Mosquitto broker, connected Python sensor publishers and a live dashboard subscriber, and captured unencrypted traffic to analyze vulnerabilities.
-                  </p>
-                </div>
-              </div>
-              <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
-              <p class="leading-relaxed">
-                I built a local MQTT pipeline, ran Mosquitto, wrote Python publishers and a dashboard subscriber, then intercepted and recorded plain-text messages. I documented captured topics, JSON payloads, and vulnerabilities (no auth, no encryption, replay risks) with remediation notes.
-              </p>
-              <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
-                <span class="text-xs font-medium text-pf-text">Google Docs</span>
-                <a href="https://docs.google.com/document/d/1hMrqSLqK0-PWYcWEEHecnjlvGIVd5MLycTi2geGryWU/edit?tab=t.0#heading=h.lpeh0tl5yvhb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
-                  <span>Access</span>
-                  <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Breakdown Item 4 -->
-          <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
-            <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
-              <div class="flex items-start gap-3.5">
-                <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">4</span>
-                <div>
-                  <h3 class="font-semibold text-base text-pf-text">Securing the Pipeline &amp; Measuring the Cost</h3>
-                  <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">
-                    I built TLS into the MQTT pipeline, generated a CA and server certificates, and reconfigured the broker and clients to refuse unencrypted connections.
-                  </p>
-                </div>
-              </div>
-              <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
-              <p class="leading-relaxed">
-                Situation: sensor traffic was exposed on the hotel network. Task: secure the MQTT pipeline. Action: generated a CA and signed server certificates, configured Mosquitto on port 8883, and updated Python clients to use TLS. Result: insecure connections were rejected and traffic was unreadable to an eavesdropper.
-              </p>
-              <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
-                <span class="text-xs font-medium text-pf-text">Google Docs</span>
-                <a href="https://docs.google.com/document/d/1GrbKsqz0s_94KIEq9Wz__QWXIOPZ_rXo/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
-                  <span>Access</span>
-                  <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Breakdown Item 5 -->
-          <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
-            <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
-              <div class="flex items-start gap-3.5">
-                <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">5</span>
-                <div>
-                  <h3 class="font-semibold text-base text-pf-text">Enforcing Device Identity &amp; Provisioning</h3>
-                  <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">
-                    I documented and enforced device identity by writing a provisioning policy for The Grand Marina's water monitoring devices.
-                  </p>
-                </div>
-              </div>
-              <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
-              <p class="leading-relaxed">
-                The work reviewed mTLS controls, produced a Device Provisioning Policy that specified certificate generation, onboarding steps, rotation schedule, revocation procedures, and per-device records for the water monitoring system.
-              </p>
-              <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
-                <span class="text-xs font-medium text-pf-text">Google Docs</span>
-                <a href="https://docs.google.com/document/d/12_DzUJd6bQFG_8O2KTi46dba-SUoWH3j6yql7auXRlQ/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
-                  <span>Access</span>
-                  <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Breakdown Item 6 -->
-          <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
-            <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
-              <div class="flex items-start gap-3.5">
-                <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">6</span>
-                <div>
-                  <h3 class="font-semibold text-base text-pf-text">Defeating Replay Attacks</h3>
-                  <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">
-                    I produced a defense comparison report evaluating timestamp checks, sequence numbering, and HMAC signing against replay attacks in a water-monitoring pipeline.
-                  </p>
-                </div>
-              </div>
-              <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
-              <p class="leading-relaxed">
-                The project tested three replay protections against immediate, delayed, and tampered replays. I ran experiments, recorded that only the combined defenses blocked all attack types, and recommended deploying all three across subscriber nodes.
-              </p>
-              <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
-                <span class="text-xs font-medium text-pf-text">Google Docs</span>
-                <a href="https://docs.google.com/document/d/1oh8dHxYjv9zP1sb0voI76M8racY0t1VadHI-jyLtSd0/edit?tab=t.0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
-                  <span>Access</span>
-                  <span>↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Breakdown Item 7 (Full Width with Embedded Google Slides Presentation) -->
-          <div class="breakdown-card open md:col-span-2 rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
-            <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
-              <div class="flex items-start gap-3.5">
-                <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">7</span>
-                <div>
-                  <h3 class="font-semibold text-base text-pf-text">Building a Real-Time Security Dashboard</h3>
-                  <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">
-                    I created a final presentation describing my defended IoT pipeline, the live attack demo, and dashboard visuals from the externship.
-                  </p>
-                </div>
-              </div>
-              <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
-              <p class="leading-relaxed">
-                I compiled the IoT Security Capstone presentation that documented the threat model, four-layer defense architecture, three-phase attack simulator, experiment setup, and results showing 0 successful attacks and real-time dashboard alerts.
-              </p>
-              <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
-                <span class="text-xs font-medium text-pf-text">Google Slides</span>
-                <a href="https://docs.google.com/presentation/d/1yb9FEiWO3OpdyqjgbhnQbc2qQHxzwAIoHkiMdtyj8pA/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
-                  <span>Access</span>
-                  <span>↗</span>
-                </a>
-              </div>
-              <!-- Embedded Google Slides Presentation Viewer -->
-              <div class="w-full overflow-hidden rounded-xl border border-pf-divider bg-pf-canvas aspect-video mt-4">
-                <iframe
-                  src="https://docs.google.com/presentation/d/1yb9FEiWO3OpdyqjgbhnQbc2qQHxzwAIoHkiMdtyj8pA/preview"
-                  title="IoT Security Capstone - Experiment Results, Insights & Recommendations"
-                  class="w-full h-full border-0"
-                  allowfullscreen="true"
-                  loading="lazy">
-                </iframe>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Bottom Navigation -->
-      <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-pf-divider">
-        <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 rounded-full border border-pf-accent text-pf-accent hover:bg-pf-accent hover:text-white px-6 py-2.5 text-sm font-medium transition-colors">
-          <span>View all work</span>
-          <span>→</span>
-        </a>
-        <a href="#work-pokedex-app" data-route="work-pokedex-app" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-text hover:text-pf-accent transition-colors">
-          <span>Previous: Pokedex App</span>
-          <span>→</span>
-        </a>
-      </div>
-
-    </section>
-
-    <!-- ========================================================== -->
-    <!-- PROJECT DETAIL VIEW 3: BREAKING GAMES SQL                  -->
-    <!-- ========================================================== -->
-    <section id="view-work-breaking-games-sql" class="hidden flex-1 w-full max-w-5xl mx-auto px-4 md:px-16 py-10 md:py-16">
-      <div class="mb-8">
-        <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-accent hover:underline">
-          <span>←</span>
-          <span>View all work</span>
-        </a>
-      </div>
-
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <div class="inline-flex flex-wrap items-center justify-center gap-2 mb-4">
-          <span class="inline-flex items-center rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-muted border border-pf-divider">Breaking Games · In progress</span>
-        </div>
-        <h1 class="font-pf-heading italic text-3xl sm:text-4xl md:text-5xl text-pf-text mb-4">SQL &amp; Database Architecture Externship with Breaking Games</h1>
-        <p class="text-base sm:text-lg text-pf-muted leading-relaxed mb-6">Turn six messy CSVs into an analytics database and a Q4 dashboard that drives real business decisions. SQL + Claude.</p>
-        <div class="flex flex-wrap items-center justify-center gap-2">
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Analytics Database Design</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Data Analysis</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">SQL Fundamentals</span>
-          <span class="rounded-full bg-pf-pill px-3.5 py-1 text-xs font-medium text-pf-text">Data Storytelling</span>
-        </div>
-      </div>
-
-      <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-pf-divider bg-pf-pill mb-10 shadow-xs">
-        <img id="detail-breaking-games-sql-img" src="assets/breaking-games-sql.jpg" alt="SQL &amp; Database Architecture Externship with Breaking Games cover" class="w-full h-full object-cover" />
-      </div>
-
-      <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-10 mb-12">
-        <h2 class="font-pf-heading italic text-2xl text-pf-text mb-4">Overview</h2>
-        <p class="text-sm sm:text-base text-pf-text leading-relaxed">The project consolidated six CSV sources into an analytics database schema and prepared a Q4 dashboard. The work examined each data source, defined data models and relationships, and transformed raw files into cleaned, queryable tables for reporting.</p>
-      </div>
-
-      <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-10 mb-12">
-        <h2 class="font-pf-heading italic text-2xl text-pf-text mb-4">What I've accomplished</h2>
-        <p class="text-sm sm:text-base text-pf-text leading-relaxed">I built a queryable SQLite analytics database from six CSV sources and documented five instant answers (top products by units and revenue, catalog size, Meta ad spend, and unique checkouts).</p>
-      </div>
-
-      <div class="mb-12">
-        <h2 class="font-pf-heading italic text-2xl sm:text-3xl text-pf-text mb-6">Project breakdown</h2>
-
-        <div class="grid grid-cols-1 gap-5 items-start">
-          <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
-            <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
-              <div class="flex items-start gap-3.5">
-                <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">1</span>
-                <div>
-                  <h3 class="font-semibold text-base text-pf-text">Getting Into Breaking Games' Raw Data</h3>
-                  <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">I built a Week 1 Holiday Game Plan document and ran SQL queries to produce five instant answers from Breaking Games' six-source dataset.</p>
-                </div>
-              </div>
-              <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
-              <p class="leading-relaxed">On Day 1 I inventoried the six data sources, ran SQL queries against the provided SQLite database, and recorded five instant answers (top products by units and revenue, catalog size, Meta ad spend, and unique checkouts) in a Week 1 Holiday Game Plan document.</p>
-              <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
-                <span class="text-xs font-medium text-pf-text">Google Docs</span>
-                <a href="https://docs.google.com/document/d/1IN10BXQgNP2dgCgG0JYa_lFwDpTW6Hc4MjBp7YznGnw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
-                  <span>Access</span>
-                  <span>↗</span>
-                </a>
-              </div>
-              <div class="w-full overflow-hidden rounded-xl border border-pf-divider bg-pf-canvas aspect-video mt-4">
-                <iframe
-                  src="https://docs.google.com/document/d/1IN10BXQgNP2dgCgG0JYa_lFwDpTW6Hc4MjBp7YznGnw/preview"
-                  title="Week 1 Holiday Game Plan"
-                  class="w-full h-full border-0"
-                  loading="lazy">
-                </iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-pf-divider">
-        <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 rounded-full border border-pf-accent text-pf-accent hover:bg-pf-accent hover:text-white px-6 py-2.5 text-sm font-medium transition-colors"><span>View all work</span><span>→</span></a>
-        <a href="#work-hydroficient-iot-cyber-defense-externship" data-route="work-hydroficient-iot-cyber-defense-externship" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-text hover:text-pf-accent transition-colors"><span>Previous: Hydroficient IoT Cyber Defense Externship</span><span>→</span></a>
-      </div>
-    </section>
 
     <!-- ========================================== -->
     <!-- FOOTER SECTION                             -->
@@ -1002,9 +222,9 @@
           <div>
             <h4 class="text-xs font-semibold uppercase tracking-wider text-pf-muted mb-3">Explore</h4>
             <ul class="space-y-2 text-sm">
-              <li><a href="index.html" data-route="home" class="route-link text-pf-text hover:text-pf-accent transition-colors">Home</a></li>
-              <li><a href="work.html" data-route="works" class="route-link text-pf-text hover:text-pf-accent transition-colors">Work</a></li>
-              <li><a href="about.html" data-route="about" class="route-link text-pf-text hover:text-pf-accent transition-colors">About</a></li>
+              <li><a href="index.html" class="text-pf-text hover:text-pf-accent transition-colors">Home</a></li>
+              <li><a href="work.html" class="text-pf-text hover:text-pf-accent transition-colors">Work</a></li>
+              <li><a href="about.html" class="text-pf-text hover:text-pf-accent transition-colors">About</a></li>
             </ul>
           </div>
 
@@ -1032,9 +252,6 @@
 
         <div class="pt-6 border-t border-pf-divider flex flex-col sm:flex-row items-center justify-between text-xs text-pf-muted gap-3">
           <span>© 2026 Diego Corsino</span>
-          <a href="https://extern.com" target="_blank" rel="noopener noreferrer" class="hover:text-pf-accent transition-colors">
-            Built with Extern
-          </a>
         </div>
       </div>
     </footer>
@@ -1042,218 +259,49 @@
   </div>
 
   <!-- ========================================== -->
-  <!-- VIEW ROUTING, FALLBACKS & INTERACTION JS   -->
+  <!-- MOBILE MENU & FALLBACK JS                  -->
   <!-- ========================================== -->
   <script>
     (function () {
-      const mainView = document.getElementById('main-portfolio-view');
-      const pokedexView = document.getElementById('view-work-pokedex-app');
-      const hydroficientView = document.getElementById('view-work-hydroficient');
-      const breakingGamesSqlView = document.getElementById('view-work-breaking-games-sql');
+      // If someone lands on index.html with a work detail hash, redirect to work.html
+      function checkWorkHashRedirect() {
+        if (window.location.hash && window.location.hash.startsWith("#work-")) {
+          window.location.replace("work.html" + window.location.hash);
+          return true;
+        }
+        return false;
+      }
+      if (checkWorkHashRedirect()) return;
 
-      const navBtnHome = document.getElementById('nav-btn-home');
-      const navBtnWorks = document.getElementById('nav-btn-works');
-      const navBtnAbout = document.getElementById('nav-btn-about');
-
-      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-      const mobileMenuDrawer = document.getElementById('mobile-menu-drawer');
-
-      // High-res inline SVG fallbacks if Extern CDN images are blocked by hotlink/CORS rules
-      const pokedexSvgFallback = "data:image/svg+xml;utf8," + encodeURIComponent(
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">' +
-        '<defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F3ECE2"/><stop offset="100%" stop-color="#E6D5C3"/></linearGradient></defs>' +
-        '<rect width="800" height="450" fill="url(#g1)"/>' +
-        '<circle cx="400" cy="210" r="95" fill="#A85432" opacity="0.12"/>' +
-        '<circle cx="400" cy="210" r="68" fill="none" stroke="#A85432" stroke-width="6"/>' +
-        '<line x1="332" y1="210" x2="468" y2="210" stroke="#A85432" stroke-width="6"/>' +
-        '<circle cx="400" cy="210" r="20" fill="#FAF6F0" stroke="#A85432" stroke-width="6"/>' +
-        '<text x="400" y="345" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#2C221E">Pokedex App</text>' +
-        '<text x="400" y="378" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6E6259">Android Development · Full-Stack · Data Visualization</text>' +
-        '</svg>'
-      );
-
-      const hydroficientSvgFallback = "data:image/svg+xml;utf8," + encodeURIComponent(
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">' +
-        '<defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#EBF3F5"/><stop offset="50%" stop-color="#F3ECE2"/><stop offset="100%" stop-color="#E2D5C6"/></linearGradient></defs>' +
-        '<rect width="800" height="450" fill="url(#g2)"/>' +
-        '<circle cx="400" cy="195" r="88" fill="#A85432" opacity="0.10"/>' +
-        '<path d="M400 125 L455 150 L455 202 C455 240 430 268 400 280 C370 268 345 240 345 202 L345 150 Z" fill="#FAF6F0" stroke="#A85432" stroke-width="5"/>' +
-        '<path d="M400 162 C400 162 378 190 378 208 C378 220 388 230 400 230 C412 230 422 220 422 208 C422 190 400 162 400 162 Z" fill="#A85432"/>' +
-        '<text x="400" y="338" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="28" fill="#2C221E">Hydroficient IoT Cyber Defense</text>' +
-        '<text x="400" y="372" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6E6259">MQTT Security · TLS / mTLS · STRIDE Threat Modeling</text>' +
-        '</svg>'
-      );
-
-      const breakingGamesSqlSvgFallback = "data:image/svg+xml;utf8," + encodeURIComponent(
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">' +
-        '<defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F3ECE2"/><stop offset="100%" stop-color="#D9E4E3"/></linearGradient></defs>' +
-        '<rect width="800" height="450" fill="url(#g3)"/>' +
-        '<rect x="275" y="105" width="250" height="170" rx="12" fill="#FAF6F0" stroke="#A85432" stroke-width="5"/>' +
-        '<path d="M315 155h170M315 195h110M315 235h145" stroke="#A85432" stroke-width="8" stroke-linecap="round" opacity="0.8"/>' +
-        '<text x="400" y="340" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="25" fill="#2C221E">Breaking Games · SQL</text>' +
-        '</svg>'
-      );
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenuDrawer = document.getElementById("mobile-menu-drawer");
 
       const avatarSvgFallback = "data:image/svg+xml;utf8," + encodeURIComponent(
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">' +
-        '<rect width="240" height="240" fill="#F3ECE2"/>' +
-        '<circle cx="120" cy="92" r="42" fill="#A85432" opacity="0.85"/>' +
-        '<path d="M48 210 C48 162 80 144 120 144 C160 144 192 162 192 210" fill="#A85432" opacity="0.85"/>' +
-        '</svg>'
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\" width=\"240\" height=\"240\">" +
+        "<rect width=\"240\" height=\"240\" fill=\"#F3ECE2\"/>" +
+        "<circle cx=\"120\" cy=\"92\" r=\"42\" fill=\"#A85432\" opacity=\"0.85\"/>" +
+        "<path d=\"M48 210 C48 162 80 144 120 144 C160 144 192 162 192 210\" fill=\"#A85432\" opacity=\"0.85\"/>" +
+        "</svg>"
       );
 
-      ['card-pokedex-img', 'detail-pokedex-img'].forEach(id => {
-        const img = document.getElementById(id);
-        if (img) {
-          img.addEventListener('error', function () {
-            if (this.src !== pokedexSvgFallback) this.src = pokedexSvgFallback;
-          });
-        }
-      });
-
-      ['card-hydroficient-img', 'detail-hydroficient-img'].forEach(id => {
-        const img = document.getElementById(id);
-        if (img) {
-          img.addEventListener('error', function () {
-            if (this.src !== hydroficientSvgFallback) this.src = hydroficientSvgFallback;
-          });
-        }
-      });
-
-      ['card-breaking-games-sql-img', 'detail-breaking-games-sql-img'].forEach(id => {
-        const img = document.getElementById(id);
-        if (img) {
-          img.addEventListener('error', function () {
-            if (this.src !== breakingGamesSqlSvgFallback) this.src = breakingGamesSqlSvgFallback;
-          });
-        }
-      });
-
-      const avatarImg = document.getElementById('hero-avatar-img');
+      const avatarImg = document.getElementById("hero-avatar-img");
       if (avatarImg) {
-        avatarImg.addEventListener('error', function () {
+        avatarImg.addEventListener("error", function () {
           if (this.src !== avatarSvgFallback) this.src = avatarSvgFallback;
         });
       }
 
-      function setActivePill(section) {
-        [navBtnHome, navBtnWorks, navBtnAbout].forEach(btn => {
-          if (btn) btn.classList.remove('active');
-        });
-        if (section === 'works' && navBtnWorks) navBtnWorks.classList.add('active');
-        else if (section === 'about' && navBtnAbout) navBtnAbout.classList.add('active');
-        else if (navBtnHome) navBtnHome.classList.add('active');
-      }
-
-      function navigateToRoute(route, updateHash) {
-        const cleanRoute = (route || 'home').replace(/^#/, '');
-
-        if (mobileMenuDrawer) mobileMenuDrawer.classList.add('hidden');
-
-        if (cleanRoute === 'work-pokedex-app') {
-          mainView.classList.add('hidden');
-          hydroficientView.classList.add('hidden');
-          breakingGamesSqlView.classList.add('hidden');
-          pokedexView.classList.remove('hidden');
-          setActivePill('works');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else if (cleanRoute === 'work-hydroficient-iot-cyber-defense-externship') {
-          mainView.classList.add('hidden');
-          pokedexView.classList.add('hidden');
-          breakingGamesSqlView.classList.add('hidden');
-          hydroficientView.classList.remove('hidden');
-          setActivePill('works');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else if (cleanRoute === 'work-breaking-games-sql') {
-          mainView.classList.add('hidden');
-          pokedexView.classList.add('hidden');
-          hydroficientView.classList.add('hidden');
-          breakingGamesSqlView.classList.remove('hidden');
-          setActivePill('works');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-          pokedexView.classList.add('hidden');
-          hydroficientView.classList.add('hidden');
-          breakingGamesSqlView.classList.add('hidden');
-          mainView.classList.remove('hidden');
-
-          const targetSection = (cleanRoute === 'works' || cleanRoute === 'about') ? cleanRoute : 'home';
-          setActivePill(targetSection);
-
-          const targetEl = document.getElementById(targetSection);
-          if (targetEl) {
-            setTimeout(() => {
-              targetEl.scrollIntoView({ behavior: 'smooth' });
-            }, 20);
-          }
-        }
-
-        if (updateHash) {
-          try {
-            window.history.pushState(null, '', '#' + cleanRoute);
-          } catch (e) {
-            // Ignore pushState restrictions inside sandboxed iframes
-          }
-        }
-      }
-
-      // Direct click listeners on all route links (works inside sandboxed iframes and on GitHub Pages)
-      document.querySelectorAll('.route-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-          const href = link.getAttribute('href') || '';
-          if (!href.startsWith('#')) return;
-          e.preventDefault();
-          const route = link.getAttribute('data-route') || href || 'home';
-          navigateToRoute(route, true);
-        });
-      });
-
-      // Browser back/forward & direct hash URL support
-      window.addEventListener('hashchange', () => {
-        navigateToRoute(window.location.hash || '#home', false);
-      });
-      window.addEventListener('popstate', () => {
-        navigateToRoute(window.location.hash || '#home', false);
-      });
-
-      // Scrollspy when main view is active
-      window.addEventListener('scroll', () => {
-        if (mainView.classList.contains('hidden')) return;
-        const scrollPos = window.scrollY + 220;
-        const aboutEl = document.getElementById('about');
-        const worksEl = document.getElementById('works');
-
-        if (aboutEl && scrollPos >= aboutEl.offsetTop) {
-          setActivePill('about');
-        } else if (worksEl && scrollPos >= worksEl.offsetTop) {
-          setActivePill('works');
-        } else {
-          setActivePill('home');
-        }
-      });
-
       // Mobile menu drawer toggle
       if (mobileMenuToggle && mobileMenuDrawer) {
-        mobileMenuToggle.addEventListener('click', () => {
-          mobileMenuDrawer.classList.toggle('hidden');
+        mobileMenuToggle.addEventListener("click", () => {
+          mobileMenuDrawer.classList.toggle("hidden");
+        });
+        mobileMenuDrawer.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => mobileMenuDrawer.classList.add("hidden"));
         });
       }
 
-      // Accordion toggles inside Hydroficient Project Breakdown
-      document.querySelectorAll('.breakdown-toggle').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const card = btn.closest('.breakdown-card');
-          const body = card ? card.querySelector('.breakdown-body') : null;
-          if (!card || !body) return;
-          card.classList.toggle('open');
-          body.classList.toggle('hidden');
-        });
-      });
-
-      // Initial route check on page load
-      if (window.location.hash) {
-        navigateToRoute(window.location.hash, false);
-      }
+      window.addEventListener("hashchange", checkWorkHashRedirect);
     })();
   </script>
 </body>
