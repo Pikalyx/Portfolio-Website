@@ -80,9 +80,14 @@
     .breakdown-card.open .breakdown-chevron {
       transform: rotate(180deg);
     }
+
+    body.home-page #works,
+    body.home-page #about {
+      display: none;
+    }
   </style>
 </head>
-<body class="bg-pf-canvas text-pf-text antialiased selection:bg-pf-accent/20 selection:text-pf-accent">
+<body class="home-page bg-pf-canvas text-pf-text antialiased selection:bg-pf-accent/20 selection:text-pf-accent">
 
   <div data-pf-theme="warm" class="relative flex min-h-screen flex-col bg-pf-canvas text-pf-text" style="--pf-nav-height: 79px;">
 
@@ -107,10 +112,10 @@
         <a href="#home" id="nav-btn-home" data-route="home" class="route-link nav-pill-btn active rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
           Home
         </a>
-        <a href="#works" id="nav-btn-works" data-route="works" class="route-link nav-pill-btn rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
+        <a href="work.html" id="nav-btn-works" data-route="works" class="route-link nav-pill-btn rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
           Work
         </a>
-        <a href="#about" id="nav-btn-about" data-route="about" class="route-link nav-pill-btn rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
+        <a href="about.html" id="nav-btn-about" data-route="about" class="route-link nav-pill-btn rounded-full px-5 py-1.5 text-sm font-medium text-pf-muted hover:text-pf-text transition-all">
           About
         </a>
       </nav>
@@ -143,9 +148,9 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu-drawer" class="hidden md:hidden border-b border-pf-divider bg-pf-surface px-4 py-4 space-y-3">
       <div class="flex gap-2">
-        <a href="#home" data-route="home" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">Home</a>
-        <a href="#works" data-route="works" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">Work</a>
-        <a href="#about" data-route="about" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">About</a>
+        <a href="index.html" data-route="home" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">Home</a>
+        <a href="work.html" data-route="works" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">Work</a>
+        <a href="about.html" data-route="about" class="route-link flex-1 text-center py-2 rounded-full border border-pf-divider text-sm font-medium text-pf-text hover:bg-pf-pill">About</a>
       </div>
       <div class="flex items-center justify-between pt-2 border-t border-pf-divider text-xs text-pf-muted">
         <a href="mailto:diegocorsino12@gmail.com" class="underline text-pf-text">diegocorsino12@gmail.com</a>
@@ -194,7 +199,7 @@
 
         <!-- Hero CTA Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-3.5 mt-3">
-          <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 rounded-full bg-pf-accent hover:bg-pf-accentHover text-white px-6 py-3 text-sm font-medium transition-colors shadow-xs">
+          <a href="work.html" data-route="works" class="route-link inline-flex items-center gap-2 rounded-full bg-pf-accent hover:bg-pf-accentHover text-white px-6 py-3 text-sm font-medium transition-colors shadow-xs">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
@@ -997,9 +1002,9 @@
           <div>
             <h4 class="text-xs font-semibold uppercase tracking-wider text-pf-muted mb-3">Explore</h4>
             <ul class="space-y-2 text-sm">
-              <li><a href="#home" data-route="home" class="route-link text-pf-text hover:text-pf-accent transition-colors">Home</a></li>
-              <li><a href="#works" data-route="works" class="route-link text-pf-text hover:text-pf-accent transition-colors">Work</a></li>
-              <li><a href="#about" data-route="about" class="route-link text-pf-text hover:text-pf-accent transition-colors">About</a></li>
+              <li><a href="index.html" data-route="home" class="route-link text-pf-text hover:text-pf-accent transition-colors">Home</a></li>
+              <li><a href="work.html" data-route="works" class="route-link text-pf-text hover:text-pf-accent transition-colors">Work</a></li>
+              <li><a href="about.html" data-route="about" class="route-link text-pf-text hover:text-pf-accent transition-colors">About</a></li>
             </ul>
           </div>
 
@@ -1195,8 +1200,10 @@
       // Direct click listeners on all route links (works inside sandboxed iframes and on GitHub Pages)
       document.querySelectorAll('.route-link').forEach(link => {
         link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href') || '';
+          if (!href.startsWith('#')) return;
           e.preventDefault();
-          const route = link.getAttribute('data-route') || link.getAttribute('href') || 'home';
+          const route = link.getAttribute('data-route') || href || 'home';
           navigateToRoute(route, true);
         });
       });
