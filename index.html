@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Document metadata, external assets, Tailwind configuration, and page-level styles -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diego Corsino | Portfolio</title>
@@ -77,6 +78,7 @@
 </head>
 <body class="bg-pf-canvas text-pf-text antialiased selection:bg-pf-accent/20 selection:text-pf-accent">
 
+  <!-- Site-wide page wrapper and theme variables -->
   <div data-pf-theme="warm" class="relative flex min-h-screen flex-col bg-pf-canvas text-pf-text" style="--pf-nav-height: 79px;">
 
     <!-- ========================================== -->
@@ -84,14 +86,14 @@
     <!-- ========================================== -->
     <header class="sticky top-0 z-50 flex h-[79px] w-full items-center justify-between border-b border-pf-divider bg-pf-canvas/95 backdrop-blur-sm px-4 transition-colors duration-200 md:px-16">
       
-      <!-- Brand / Left -->
+      <!-- Brand link -->
       <a href="index.html" class="flex items-center gap-2.5 text-left focus:outline-none group">
         <span class="font-pf-heading italic text-xl md:text-2xl text-pf-text group-hover:text-pf-accent transition-colors">
           Diego Corsino
         </span>
       </a>
 
-      <!-- Center Pill Switcher -->
+      <!-- Desktop primary navigation -->
       <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-1 rounded-full border border-pf-divider bg-pf-surface p-1 shadow-2xs">
         <a href="index.html" id="nav-btn-home" class="nav-pill-btn active rounded-full px-5 py-1.5 text-sm font-medium text-white transition-all">
           Home
@@ -104,7 +106,7 @@
         </a>
       </nav>
 
-      <!-- Right Actions: Email & Social Icons -->
+      <!-- Desktop contact and social links -->
       <div class="hidden sm:flex items-center gap-4">
         <a href="mailto:diegocorsino12@gmail.com" class="text-sm text-pf-text hover:text-pf-accent underline underline-offset-4 decoration-pf-divider hover:decoration-pf-accent transition-colors">
           diegocorsino12@gmail.com
@@ -121,7 +123,7 @@
         </a>
       </div>
 
-      <!-- Mobile Menu Trigger -->
+      <!-- Mobile navigation toggle -->
       <button type="button" id="mobile-menu-toggle" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-pf-text hover:bg-pf-pill">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -129,7 +131,7 @@
       </button>
     </header>
 
-    <!-- Mobile Navigation Drawer -->
+    <!-- Mobile navigation drawer with page links and contact links -->
     <div id="mobile-menu-drawer" class="hidden md:hidden border-b border-pf-divider bg-pf-surface px-4 py-4 space-y-3">
       <div class="flex gap-2">
         <a href="index.html" class="flex-1 text-center py-2 rounded-full border border-pf-accent bg-pf-accent text-sm font-medium text-white">Home</a>
@@ -150,10 +152,10 @@
     <!-- ========================================== -->
     <main id="main-portfolio-view" class="flex-1 flex items-center justify-center">
 
-      <!-- HERO SECTION -->
+      <!-- Hero content: profile image, availability, introduction, and calls to action -->
       <section id="home" class="flex w-full flex-col items-center gap-5 px-4 pt-12 pb-16 text-center md:px-16 md:pt-20 md:pb-24 max-w-4xl mx-auto">
         
-        <!-- Avatar + Overlapping "Club President" Script Pill -->
+        <!-- Profile image -->
         <div class="relative flex flex-col items-center">
           <div class="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-pf-surface shadow-md bg-pf-pill">
             <img
@@ -165,23 +167,23 @@
           </div>
         </div>
 
-        <!-- Status Badge: Open to work -->
+        <!-- Availability status -->
         <div class="inline-flex items-center gap-2 rounded-full border border-pf-divider bg-pf-surface px-3.5 py-1 text-xs font-medium text-pf-text shadow-2xs">
           <span class="h-2 w-2 rounded-full bg-pf-greenDot"></span>
           <span>Open to work</span>
         </div>
 
-        <!-- Heading -->
+        <!-- Introductory heading -->
         <h1 class="font-pf-heading italic text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-pf-text mt-1">
           Hi, I'm Diego Corsino.
         </h1>
 
-        <!-- Subtitle -->
+        <!-- Introductory summary -->
         <p class="max-w-2xl text-base sm:text-lg text-pf-muted leading-relaxed">
           As a Computer Science Graduate and former Club President, I combine leadership with a passion for technology, crafting impactful digital solutions.
         </p>
 
-        <!-- Hero CTA Buttons -->
+        <!-- Primary portfolio and resume actions -->
         <div class="flex flex-wrap items-center justify-center gap-3.5 mt-3">
           <a href="work.html" class="inline-flex items-center gap-2 rounded-full bg-pf-accent hover:bg-pf-accentHover text-white px-6 py-3 text-sm font-medium transition-colors shadow-xs">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -201,14 +203,12 @@
 
     </main>
 
-    <!-- ========================================== -->
-    <!-- FOOTER SECTION                             -->
-    <!-- ========================================== -->
+    <!-- Site footer: identity, navigation, contact details, and resume link -->
     <footer class="border-t border-pf-divider bg-pf-canvas py-12 px-4 md:px-16 mt-12">
       <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pb-10">
           
-          <!-- Column 1: Brand & Status -->
+          <!-- Footer identity and availability -->
           <div class="space-y-3">
             <div class="font-pf-heading italic text-xl text-pf-text">Diego Corsino</div>
             <div class="text-xs text-pf-muted">Club President</div>
@@ -218,7 +218,7 @@
             </div>
           </div>
 
-          <!-- Column 2: Explore -->
+          <!-- Footer page navigation -->
           <div>
             <h4 class="text-xs font-semibold uppercase tracking-wider text-pf-muted mb-3">Explore</h4>
             <ul class="space-y-2 text-sm">
@@ -228,7 +228,7 @@
             </ul>
           </div>
 
-          <!-- Column 3: Contact -->
+          <!-- Footer contact details -->
           <div>
             <h4 class="text-xs font-semibold uppercase tracking-wider text-pf-muted mb-3">Contact</h4>
             <ul class="space-y-2 text-sm">
@@ -239,7 +239,7 @@
             </ul>
           </div>
 
-          <!-- Column 4: Resume -->
+          <!-- Footer resume download -->
           <div>
             <h4 class="text-xs font-semibold uppercase tracking-wider text-pf-muted mb-3">Resume</h4>
             <a href="assets/Diego_Corsino.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-pf-heading italic text-base text-pf-accent hover:underline">
@@ -258,9 +258,7 @@
 
   </div>
 
-  <!-- ========================================== -->
-  <!-- MOBILE MENU & FALLBACK JS                  -->
-  <!-- ========================================== -->
+  <!-- Page behavior: hash redirect, mobile menu, and avatar fallback -->
   <script>
     (function () {
       // If someone lands on index.html with a work detail hash, redirect to work.html

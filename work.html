@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Document metadata, external assets, Tailwind configuration, and page-level styles -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work | Diego Corsino</title>
@@ -56,6 +57,7 @@
   </style>
 </head>
 <body class="bg-pf-canvas text-pf-text antialiased selection:bg-pf-accent/20 selection:text-pf-accent">
+  <!-- Shared site header and desktop navigation -->
   <header class="sticky top-0 z-50 flex h-[79px] w-full items-center justify-between border-b border-pf-divider bg-pf-canvas/95 px-4 transition-colors duration-200 backdrop-blur-sm md:px-16">
     <a href="index.html" class="group flex items-center gap-2.5 text-left focus:outline-none">
       <span class="font-pf-heading text-xl italic text-pf-text transition-colors group-hover:text-pf-accent md:text-2xl">Diego Corsino</span>
@@ -79,6 +81,7 @@
     </button>
   </header>
 
+  <!-- Mobile navigation drawer with page links and contact links -->
   <div id="mobile-menu-drawer" class="hidden space-y-3 border-b border-pf-divider bg-pf-surface px-4 py-4 md:hidden">
     <div class="flex gap-2">
       <a href="index.html" class="flex-1 rounded-full border border-pf-divider py-2 text-center text-sm font-medium text-pf-text hover:bg-pf-pill">Home</a>
@@ -94,9 +97,7 @@
     </div>
   </div>
 
-  <!-- ========================================================== -->
-  <!-- MAIN WORK SAMPLES LIST VIEW                                -->
-  <!-- ========================================================== -->
+  <!-- Work index view: heading and project summary cards -->
   <main id="main-work-view" class="mx-auto w-full max-w-6xl px-4 py-12 md:px-16 md:py-16">
     <div class="mx-auto mb-10 max-w-2xl text-center md:mb-12">
       <h1 class="font-pf-heading text-4xl italic text-pf-text md:text-[42px]">Work samples</h1>
@@ -104,7 +105,7 @@
     </div>
 
     <div class="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2">
-      <!-- Project Card 1: Pokedex App -->
+      <!-- Project summary card: Pokedex App -->
       <a href="#work-pokedex-app" id="card-pokedex" data-route="work-pokedex-app" class="route-link group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-pf-divider bg-pf-surface transition-all hover:border-pf-accent/60 hover:shadow-lg cursor-pointer">
         <div>
           <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-pf-pill border-b border-pf-divider">
@@ -137,7 +138,7 @@
         </div>
       </a>
 
-      <!-- Project Card 2: Hydroficient IoT Cyber Defense Externship -->
+      <!-- Project summary card: Hydroficient IoT Cyber Defense Externship -->
       <a href="#work-hydroficient-iot-cyber-defense-externship" id="card-hydroficient" data-route="work-hydroficient-iot-cyber-defense-externship" class="route-link group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-pf-divider bg-pf-surface transition-all hover:border-pf-accent/60 hover:shadow-lg cursor-pointer">
         <div>
           <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-pf-pill border-b border-pf-divider">
@@ -174,7 +175,7 @@
         </div>
       </a>
 
-      <!-- Project Card 3: SQL & Database Architecture Externship -->
+      <!-- Project summary card: SQL and Database Architecture Externship -->
       <a href="#work-breaking-games-sql" id="card-breaking-games-sql" data-route="work-breaking-games-sql" class="route-link group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-pf-divider bg-pf-surface transition-all hover:border-pf-accent/60 hover:shadow-lg cursor-pointer">
         <div>
           <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-pf-pill border-b border-pf-divider">
@@ -206,11 +207,9 @@
     </div>
   </main>
 
-  <!-- ========================================================== -->
-  <!-- PROJECT DETAIL VIEW 1: POKEDEX APP (#work-pokedex-app)     -->
-  <!-- ========================================================== -->
+  <!-- Project detail view: Pokedex App -->
   <section id="view-work-pokedex-app" class="hidden flex-1 w-full max-w-5xl mx-auto px-4 md:px-16 py-10 md:py-16">
-    <!-- Top Back Navigation -->
+    <!-- Detail view back navigation -->
     <div class="mb-8">
       <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-accent hover:underline">
         <span>←</span>
@@ -218,7 +217,7 @@
       </a>
     </div>
 
-    <!-- Header Block -->
+    <!-- Project title, date, summary, and technology tags -->
     <div class="text-center max-w-3xl mx-auto mb-10">
       <div class="inline-flex items-center gap-2 rounded-full bg-pf-pill border border-pf-divider px-3.5 py-1 text-xs font-medium text-pf-muted mb-4">
         <span>Nov 2025</span>
@@ -244,7 +243,7 @@
       </div>
     </div>
 
-    <!-- Project Cover Banner Image -->
+    <!-- Project cover image -->
     <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-pf-divider bg-pf-pill mb-10 shadow-xs">
       <img
         id="detail-pokedex-img"
@@ -254,7 +253,7 @@
       />
     </div>
 
-    <!-- What I've accomplished Card -->
+    <!-- Project accomplishments and repository link -->
     <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-10 mb-12">
       <h2 class="font-pf-heading italic text-2xl text-pf-text mb-4">
         What I've accomplished
@@ -272,7 +271,7 @@
       </p>
     </div>
 
-    <!-- Bottom Navigation -->
+    <!-- Detail view previous/next navigation -->
     <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-pf-divider">
       <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 rounded-full border border-pf-accent text-pf-accent hover:bg-pf-accent hover:text-white px-6 py-2.5 text-sm font-medium transition-colors">
         <span>View all work</span>
@@ -285,11 +284,9 @@
     </div>
   </section>
 
-  <!-- ========================================================== -->
-  <!-- PROJECT DETAIL VIEW 2: HYDROFICIENT (#work-hydroficient...) -->
-  <!-- ========================================================== -->
+  <!-- Project detail view: Hydroficient IoT Cyber Defense Externship -->
   <section id="view-work-hydroficient" class="hidden flex-1 w-full max-w-6xl mx-auto px-4 md:px-16 py-10 md:py-16">
-    <!-- Top Back Navigation -->
+    <!-- Detail view back navigation -->
     <div class="mb-8">
       <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-accent hover:underline">
         <span>←</span>
@@ -297,7 +294,7 @@
       </a>
     </div>
 
-    <!-- Header Block -->
+    <!-- Project title, verification status, summary, and technology tags -->
     <div class="text-center max-w-3xl mx-auto mb-10">
       <div class="inline-flex flex-wrap items-center justify-center gap-2 mb-4">
         <span class="inline-flex items-center gap-1.5 rounded-full bg-pf-greenBg px-3 py-1 text-xs font-medium text-pf-greenText border border-pf-greenDot/20">
@@ -325,7 +322,7 @@
       </div>
     </div>
 
-    <!-- Project Cover Banner Image -->
+    <!-- Project cover image -->
     <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-pf-divider bg-pf-pill mb-10 shadow-xs">
       <img
         id="detail-hydroficient-img"
@@ -335,7 +332,7 @@
       />
     </div>
 
-    <!-- Overview Card -->
+    <!-- Project overview -->
     <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-10 mb-10">
       <h2 class="font-pf-heading italic text-2xl text-pf-text mb-4">
         Overview
@@ -345,7 +342,7 @@
       </p>
     </div>
 
-    <!-- Project Breakdown (7 Expandable Accordion Cards) -->
+    <!-- Expandable project breakdown and linked deliverables -->
     <div class="mb-12">
       <h2 class="font-pf-heading italic text-2xl sm:text-3xl text-pf-text mb-6">
         Project breakdown
@@ -353,7 +350,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
 
-        <!-- Breakdown Item 1 -->
+        <!-- Breakdown item 1: threat modeling -->
         <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
           <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
             <div class="flex items-start gap-3.5">
@@ -383,7 +380,7 @@
           </div>
         </div>
 
-        <!-- Breakdown Item 2 -->
+        <!-- Breakdown item 2: Python and data preparation -->
         <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
           <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
             <div class="flex items-start gap-3.5">
@@ -413,7 +410,7 @@
           </div>
         </div>
 
-        <!-- Breakdown Item 3 -->
+        <!-- Breakdown item 3: insecure MQTT pipeline -->
         <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
           <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
             <div class="flex items-start gap-3.5">
@@ -443,7 +440,7 @@
           </div>
         </div>
 
-        <!-- Breakdown Item 4 -->
+        <!-- Breakdown item 4: TLS pipeline security -->
         <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
           <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
             <div class="flex items-start gap-3.5">
@@ -473,7 +470,7 @@
           </div>
         </div>
 
-        <!-- Breakdown Item 5 -->
+        <!-- Breakdown item 5: device identity and provisioning -->
         <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
           <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
             <div class="flex items-start gap-3.5">
@@ -503,7 +500,7 @@
           </div>
         </div>
 
-        <!-- Breakdown Item 6 -->
+        <!-- Breakdown item 6: replay attack defenses -->
         <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
           <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
             <div class="flex items-start gap-3.5">
@@ -533,7 +530,7 @@
           </div>
         </div>
 
-        <!-- Breakdown Item 7 (Full Width with Embedded Google Slides Presentation) -->
+        <!-- Breakdown item 7: final security dashboard presentation -->
         <div class="breakdown-card open md:col-span-2 rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
           <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
             <div class="flex items-start gap-3.5">
@@ -560,7 +557,7 @@
                 <span>↗</span>
               </a>
             </div>
-            <!-- Embedded Google Slides Presentation Viewer -->
+            <!-- Embedded presentation viewer -->
             <div class="w-full overflow-hidden rounded-xl border border-pf-divider bg-pf-canvas aspect-video mt-4">
               <iframe
                 src="https://docs.google.com/presentation/d/1yb9FEiWO3OpdyqjgbhnQbc2qQHxzwAIoHkiMdtyj8pA/preview"
@@ -572,10 +569,11 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
-    <!-- Bottom Navigation -->
+    <!-- Detail view previous/next navigation -->
       <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-pf-divider">
         <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 rounded-full border border-pf-accent text-pf-accent hover:bg-pf-accent hover:text-white px-6 py-2.5 text-sm font-medium transition-colors">
           <span>View all work</span>
@@ -594,10 +592,9 @@
       </div>
     </section>
 
-  <!-- ========================================================== -->
-  <!-- PROJECT DETAIL VIEW 3: BREAKING GAMES SQL                  -->
-  <!-- ========================================================== -->
+  <!-- Project detail view: Breaking Games SQL and Database Architecture -->
   <section id="view-work-breaking-games-sql" class="hidden flex-1 w-full max-w-5xl mx-auto px-4 md:px-16 py-10 md:py-16">
+    <!-- Detail view back navigation -->
     <div class="mb-8">
       <a href="#works" data-route="works" class="route-link inline-flex items-center gap-2 text-sm font-medium text-pf-accent hover:underline">
         <span>←</span>
@@ -605,6 +602,7 @@
       </a>
     </div>
 
+    <!-- Project title, status, summary, and technology tags -->
     <div class="text-center max-w-3xl mx-auto mb-10">
       <div class="inline-flex flex-wrap items-center justify-center gap-2 mb-4">
         <span class="inline-flex items-center rounded-full bg-pf-pill px-3 py-1 text-xs font-medium text-pf-muted border border-pf-divider">Breaking Games · In progress</span>
@@ -619,24 +617,29 @@
       </div>
     </div>
 
+    <!-- Project cover image -->
     <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-pf-divider bg-pf-pill mb-10 shadow-xs">
       <img id="detail-breaking-games-sql-img" src="assets/breaking-games-sql.jpg" alt="SQL &amp; Database Architecture Externship with Breaking Games cover" class="w-full h-full object-cover" />
     </div>
 
+    <!-- Project overview -->
     <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-10 mb-12">
       <h2 class="font-pf-heading italic text-2xl text-pf-text mb-4">Overview</h2>
       <p class="text-sm sm:text-base text-pf-text leading-relaxed">The project consolidated six CSV sources into an analytics database schema and prepared a Q4 dashboard. The work examined each data source, defined data models and relationships, and transformed raw files into cleaned, queryable tables for reporting.</p>
     </div>
 
+    <!-- Project accomplishments -->
     <div class="rounded-2xl border border-pf-divider bg-pf-surface p-6 md:p-10 mb-12">
       <h2 class="font-pf-heading italic text-2xl text-pf-text mb-4">What I've accomplished</h2>
       <p class="text-sm sm:text-base text-pf-text leading-relaxed">I built a queryable SQLite analytics database from six CSV sources and documented five instant answers (top products by units and revenue, catalog size, Meta ad spend, and unique checkouts).</p>
     </div>
 
+    <!-- Expandable project breakdown and linked deliverables -->
     <div class="mb-12">
       <h2 class="font-pf-heading italic text-2xl sm:text-3xl text-pf-text mb-6">Project breakdown</h2>
 
       <div class="grid grid-cols-1 gap-5 items-start">
+        <!-- Breakdown item 1: raw data exploration -->
         <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
           <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
             <div class="flex items-start gap-3.5">
@@ -669,6 +672,40 @@
             </div>
           </div>
         </div>
+        <!-- Breakdown item 2: database design -->
+
+        <div class="breakdown-card open rounded-2xl border border-pf-divider bg-pf-surface p-6 transition-all">
+          <button type="button" class="breakdown-toggle w-full text-left flex items-start justify-between gap-4 focus:outline-none">
+            <div class="flex items-start gap-3.5">
+              <span class="w-7 h-7 rounded-full bg-pf-pill border border-pf-divider text-pf-accent text-xs font-semibold flex items-center justify-center shrink-0 mt-0.5">2</span>
+              <div>
+                <h3 class="font-semibold text-base text-pf-text">Designing Your First Database</h3>
+                <p class="text-xs sm:text-sm text-pf-muted mt-1 leading-relaxed">I built a reorder recommendation for Breaking Games by producing a ranked product list and decision rationale based on unified sales and traffic data.</p>
+              </div>
+            </div>
+            <svg class="breakdown-chevron w-5 h-5 text-pf-muted shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="breakdown-body mt-4 pt-4 border-t border-pf-divider text-xs sm:text-sm text-pf-muted space-y-4">
+            <p class="leading-relaxed">Facing scattered spreadsheets, I created a unified schema, aggregated product performance with GROUP BY and SUM, and produced a ranked reorder recommendation that identified which products to restock for the holidays.</p>
+            <div class="flex items-center justify-between rounded-xl bg-pf-canvas px-4 py-2.5 border border-pf-divider">
+              <span class="text-xs font-medium text-pf-text">Google Docs</span>
+              <a href="https://docs.google.com/document/d/1IN10BXQgNP2dgCgG0JYa_lFwDpTW6Hc4MjBp7YznGnw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-pf-accent hover:underline">
+                <span>Access</span>
+                <span>↗</span>
+              </a>
+            </div>
+            <div class="w-full overflow-hidden rounded-xl border border-pf-divider bg-pf-canvas aspect-video mt-4">
+              <iframe
+                src="https://docs.google.com/document/d/1IN10BXQgNP2dgCgG0JYa_lFwDpTW6Hc4MjBp7YznGnw/preview"
+                title="Designing Your First Database preview"
+                class="w-full h-full border-0"
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -678,14 +715,12 @@
       </div>
     </section>
 
-  <!-- ========================================== -->
-  <!-- FOOTER SECTION                             -->
-  <!-- ========================================== -->
+  <!-- Site footer: identity, navigation, contact details, and resume link -->
   <footer class="border-t border-pf-divider bg-pf-canvas py-12 px-4 md:px-16 mt-12">
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pb-10">
         
-        <!-- Column 1: Brand & Status -->
+        <!-- Footer identity and availability -->
         <div class="space-y-3">
           <div class="font-pf-heading italic text-xl text-pf-text">Diego Corsino</div>
           <div class="text-xs text-pf-muted">Club President</div>
@@ -695,7 +730,7 @@
           </div>
         </div>
 
-        <!-- Column 2: Explore -->
+        <!-- Footer page navigation -->
         <div>
           <h4 class="text-xs font-semibold uppercase tracking-wider text-pf-muted mb-3">Explore</h4>
           <ul class="space-y-2 text-sm">
@@ -705,7 +740,7 @@
           </ul>
         </div>
 
-        <!-- Column 3: Contact -->
+        <!-- Footer contact details -->
         <div>
           <h4 class="text-xs font-semibold uppercase tracking-wider text-pf-muted mb-3">Contact</h4>
           <ul class="space-y-2 text-sm">
@@ -716,7 +751,7 @@
           </ul>
         </div>
 
-        <!-- Column 4: Resume -->
+        <!-- Footer resume download -->
         <div>
           <h4 class="text-xs font-semibold uppercase tracking-wider text-pf-muted mb-3">Resume</h4>
           <a href="assets/Diego_Corsino.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-pf-heading italic text-base text-pf-accent hover:underline">
@@ -733,6 +768,7 @@
     </div>
   </footer>
 
+  <!-- Page behavior: mobile menu, image fallbacks, accordions, and hash routing -->
   <script>
     (function () {
       const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
@@ -742,7 +778,7 @@
       const hydroficientView = document.getElementById('view-work-hydroficient');
       const breakingGamesSqlView = document.getElementById('view-work-breaking-games-sql');
 
-      // High-res inline SVG fallbacks
+      // Image fallback assets used when project images cannot be loaded.
       const pokedexSvgFallback = "data:image/svg+xml;utf8," + encodeURIComponent(
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">' +
         '<defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F3ECE2"/><stop offset="100%" stop-color="#E6D5C3"/></linearGradient></defs>' +
@@ -805,7 +841,7 @@
         }
       });
 
-      // Mobile menu toggle
+      // Toggle the mobile navigation drawer and close it after navigation.
       if (mobileMenuToggle && mobileMenuDrawer) {
         mobileMenuToggle.addEventListener('click', () => {
           mobileMenuDrawer.classList.toggle('hidden');
@@ -815,7 +851,7 @@
         });
       }
 
-      // Accordion toggles inside Project Breakdown
+      // Expand and collapse project breakdown cards.
       document.querySelectorAll('.breakdown-toggle').forEach(btn => {
         btn.addEventListener('click', () => {
           const card = btn.closest('.breakdown-card');
@@ -826,7 +862,7 @@
         });
       });
 
-      // View routing
+      // Show the requested work view and keep the URL hash in sync.
       function navigateToWorkRoute(route, updateHash) {
         const cleanRoute = (route || '').replace(/^#/, '');
 
@@ -869,7 +905,7 @@
         }
       }
 
-      // Route click listeners
+      // Intercept internal route links so views change without a full reload.
       document.querySelectorAll('.route-link').forEach(link => {
         link.addEventListener('click', (e) => {
           const href = link.getAttribute('href') || '';
@@ -885,7 +921,7 @@
         });
       });
 
-      // Top nav "Work" link reset
+      // Reset detail views when the top-level Work link is selected.
       document.querySelectorAll('a[href="work.html"]').forEach(link => {
         link.addEventListener('click', (e) => {
           if (!pokedexView.classList.contains('hidden') || !hydroficientView.classList.contains('hidden') || !breakingGamesSqlView.classList.contains('hidden')) {
